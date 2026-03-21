@@ -93,7 +93,7 @@ func (h *UserHandler) SaveUser(w http.ResponseWriter, r *http.Request) {
 
 	b, err := io.ReadAll(r.Body)
 	if err != nil {
-		log.Printf("Failed to convert string to int %v", err)
+		log.Printf("Failed to read request body%v", err)
 	}
 	defer r.Body.Close()
 
